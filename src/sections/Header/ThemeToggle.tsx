@@ -10,11 +10,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/ui";
-import { useScopedI18n } from "@/lib/i18n/client";
 
 export default function ModeToggle() {
   const { setTheme } = useTheme();
-  const t = useScopedI18n("header.themeToggle");
 
   return (
     <DropdownMenu>
@@ -27,13 +25,13 @@ export default function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          {t("light")}
+          Light
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          {t("dark")}
+        Dark
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          {t("system")}
+          System
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

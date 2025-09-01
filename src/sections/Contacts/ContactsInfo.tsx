@@ -1,13 +1,12 @@
-import { useScopedI18n } from "@/lib/i18n/client";
 import Link from "next/link";
 import { LuMail, LuPhone, LuGithub } from "react-icons/lu";
 
 export default function ContactsInfo() {
-  const t = useScopedI18n("contacts");
-
   return (
     <div className="text-center md:text-start">
-      <p className="lead mb-10">{t("message")}</p>
+      <p className="lead mb-10">Feel free to reach out with any inquiries, collaborations, or projects!
+      I&apos;m passionate about creating engaging web experiences and would
+      love to connect with you.</p>
       <address className="flex flex-col items-center gap-2.5 md:items-start">
         <Link
           href="https://github.com/Fall3n4ngle"

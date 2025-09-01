@@ -13,23 +13,20 @@ import {
   Textarea,
 } from "@/ui";
 import { cn } from "@/common/utils";
-import { LuLoader2, LuSend } from "react-icons/lu";
+import { LuLoader, LuSend } from "react-icons/lu";
 import { sendEmail } from "./actions";
 import { toast } from "sonner";
-import { useScopedI18n } from "@/lib/i18n/client";
 
 export default function ContactsForm() {
-  const t = useScopedI18n("contacts.form");
-
   const form = useForm<SendEmailFields>({
     resolver: zodResolver(
       createEmailSchema({
-        nameRequired: t("errors.nameRequired"),
-        nameMin: t("errors.nameMin"),
-        emailRequired: t("errors.emailRequired"),
-        emailValid: t("errors.emailValid"),
-        messageRequired: t("errors.messageRequired"),
-        messageMin: t("errors.messageMin"),
+        nameRequired: "Name is required",
+        nameMin: "Name must be at least 2 characters",
+        emailRequired: "Email is required",
+        emailValid: "Email must be valid",
+        messageRequired: "Message is required",
+        messageMin: "Message must be at least 2 characters",
       }),
     ),
     defaultValues: {
@@ -43,12 +40,12 @@ export default function ContactsForm() {
     const result = await sendEmail(fields);
 
     if (result.success) {
-      toast.success(t("successMessage"));
+      toast.success("Sent message successfully");
       form.reset();
       return;
     }
 
-    toast.error(t("errorMessage"));
+    toast.error("Failed to send message");
   };
 
   const { isSubmitting } = form.formState;
@@ -65,7 +62,7 @@ export default function ContactsForm() {
           render={({ field, fieldState: { error } }) => (
             <FormItem>
               <FormLabel>
-                {t("name")}{" "}
+                Name{" "}
                 <span className={cn(error && "text-destructive")}>*</span>
               </FormLabel>
               <FormControl>
@@ -96,7 +93,7 @@ export default function ContactsForm() {
           render={({ field, fieldState: { error } }) => (
             <FormItem>
               <FormLabel>
-                {t("message")}{" "}
+                Message{" "}
                 <span className={cn(error && "text-destructive")}>*</span>
               </FormLabel>
               <FormControl>
@@ -111,10 +108,10 @@ export default function ContactsForm() {
           disabled={isSubmitting}
         >
           {isSubmitting ? (
-            <LuLoader2 className="h-5 w-5 animate-spin" />
+            <LuLoader className="h-5 w-5 animate-spin" />
           ) : (
             <>
-              {t("send")}
+              Send
               <LuSend className="ml-2 h-5 w-5" />
             </>
           )}

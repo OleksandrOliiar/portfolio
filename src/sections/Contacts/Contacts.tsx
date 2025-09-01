@@ -5,11 +5,9 @@ import ContactsForm from "./ContactsForm";
 import ContactsInfo from "./ContactsInfo";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/common/hooks";
-import { useScopedI18n } from "@/lib/i18n/client";
 
 export default function Contacts() {
   const { ref } = useSectionInView("contacts", 0.5);
-  const t = useScopedI18n("contacts");
 
   return (
     <section
@@ -22,7 +20,7 @@ export default function Contacts() {
         viewport={{ once: true }}
         className="h2 mb-24 text-center"
       >
-        {t("title")}
+        Contacts
       </motion.h2>
       <div className="mx-auto flex flex-col-reverse items-start gap-10 md:flex-row md:gap-14">
         <motion.div

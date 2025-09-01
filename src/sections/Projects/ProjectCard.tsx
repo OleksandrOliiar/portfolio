@@ -11,7 +11,6 @@ type Props = {
   description: string;
   siteLink: string;
   githubLink: string;
-  viewSiteText: string;
 };
 
 export default function ProjectCard({
@@ -22,7 +21,6 @@ export default function ProjectCard({
   siteLink,
   title,
   direction,
-  viewSiteText,
 }: Props) {
   return (
     <article className="flex flex-col items-center gap-7 md:flex-row">
@@ -69,7 +67,7 @@ export default function ProjectCard({
         />
         <div className="flex items-center justify-center gap-1 md:justify-start">
           <Link href={siteLink} target="_blank">
-            <Button variant="link">{viewSiteText}</Button>
+            <Button variant="link">View site</Button>
           </Link>
           <Link href={githubLink} target="_blank">
             <Button variant="link">Github</Button>

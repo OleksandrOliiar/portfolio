@@ -6,12 +6,10 @@ import { LuChevronsUp } from "react-icons/lu";
 import { AnimatePresence, motion } from "framer-motion";
 import { useActiveSection } from "@/providers";
 import Link from "next/link";
-import { useScopedI18n } from "@/lib/i18n/client";
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
   const { scrollToSection } = useActiveSection();
-  const t = useScopedI18n("header.navigation");
 
   useEffect(() => {
     const callback = () => {
@@ -38,7 +36,7 @@ export function ScrollToTop() {
             scrollToSection("home");
           }}
         >
-          <Link href="#home" aria-label={t("home")}>
+          <Link href="#home" aria-label="Scroll to top">
             <Button className="h-12 w-12 rounded-full p-3">
               <LuChevronsUp className="h-7 w-7" />
             </Button>

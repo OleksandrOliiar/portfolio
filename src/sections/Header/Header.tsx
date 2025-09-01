@@ -1,7 +1,6 @@
 "use client";
 
 import { animationVariants } from "@/common/const";
-import LocaleToggle from "./LocaleToggle";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import SidebarNavigation from "./SidebarNavigation";
@@ -26,7 +25,6 @@ export default function Header() {
         </div>
         <div className="flex items-center gap-3">
           <ThemeToggle />
-          <LocaleToggle />
         </div>
       </div>
     </motion.header>

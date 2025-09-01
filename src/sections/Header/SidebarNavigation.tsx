@@ -4,12 +4,10 @@ import { LuMenu } from "react-icons/lu";
 import Link from "next/link";
 import { NavigationKey, navigationItems } from "@/common/const";
 import { useActiveSection } from "@/providers";
-import { useScopedI18n } from "@/lib/i18n/client";
 import { motion } from "framer-motion";
 
 export default function SidebarNavigation() {
   const { activeSection, scrollToSection } = useActiveSection();
-  const t = useScopedI18n("header.navigation");
 
   return (
     <Sheet>
@@ -20,9 +18,8 @@ export default function SidebarNavigation() {
         <nav>
           <ul className="flex flex-col items-center gap-3">
             {Object.keys(navigationItems).map((key, index) => {
-              const { href, id } = navigationItems[key as NavigationKey];
+              const { href, id, label } = navigationItems[key as NavigationKey];
               const isActive = id === activeSection;
-              const label = t(key as NavigationKey);
 
               return (
                 <motion.li

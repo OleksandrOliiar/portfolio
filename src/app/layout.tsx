@@ -4,26 +4,20 @@ import { Providers } from "@/providers";
 import { Header } from "@/sections/Header";
 import { ScrollToTop } from "@/ui";
 import { ReactElement } from "react";
-import { getScopedI18n, getStaticParams } from "@/lib/i18n/server";
-import { setStaticParamsLocale } from "next-international/server";
 
-import "../globals.css";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
-  params: { locale },
   children,
 }: {
-  params: { locale: string };
   children: ReactElement;
 }) {
-  setStaticParamsLocale(locale);
-
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className}`}>
-        <Providers locale={locale}>
+        <Providers>
           <div className="relative flex min-h-screen flex-col overflow-hidden ">
             <Header />
             <main className="grow">{children}</main>
@@ -35,21 +29,15 @@ export default function RootLayout({
   );
 }
 
-export function generateStaticParams() {
-  return getStaticParams();
-}
-
 export const generateMetadata = async ({
   params: { locale },
 }: {
   params: { locale: string };
 }) => {
-  const t = await getScopedI18n("metadata");
-
   return {
     metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
-    title: t("title"),
-    description: t("description"),
+    title: "Oleksandr - Frontend Developer",
+    description: "Welcome to my personal portfolio website, a showcase of my skills demonstrated through my projects, complete with contact information",
     twitter: {
       card: "summary_large_image",
     },
@@ -60,8 +48,8 @@ export const generateMetadata = async ({
       },
     },
     openGraph: {
-      title: t("title"),
-      description: t("description"),
+      title: "Oleksandr - Frontend Developer",
+      description: "Welcome to my personal portfolio website, a showcase of my skills demonstrated through my projects, complete with contact information",
       locale,
       authors: {
         name: "Oleksandr Oliiar",

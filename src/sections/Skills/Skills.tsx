@@ -4,12 +4,10 @@ import { animationVariants, navigationItems } from "@/common/const";
 import { skills } from "./const";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/common/hooks";
-import { useScopedI18n } from "@/lib/i18n/client";
 import SkillCard from "./SkillCard";
 
 export default function Skills() {
   const { ref } = useSectionInView("skills", 1);
-  const t = useScopedI18n("skills");
 
   return (
     <section
@@ -18,8 +16,7 @@ export default function Skills() {
       className="mb-36 scroll-mt-24"
     >
       <motion.h2 {...animationVariants} className="h2 mb-28 text-center">
-        {" "}
-        {t("title")}
+        Skills
       </motion.h2>
       <motion.ul
         {...animationVariants}

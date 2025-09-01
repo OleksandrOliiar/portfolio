@@ -3,19 +3,16 @@ import { cn } from "@/common/utils";
 import { useActiveSection } from "@/providers";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useScopedI18n } from "@/lib/i18n/client";
 
 export default function Navigation() {
   const { activeSection, scrollToSection } = useActiveSection();
-  const t = useScopedI18n("header.navigation");
 
   return (
     <nav className="rounded-3xl bg-secondary px-2.5 py-1.5">
       <ul className="flex items-center gap-2 ">
         {Object.keys(navigationItems).map((key) => {
-          const { href, id } = navigationItems[key as NavigationKey];
+          const { href, label, id } = navigationItems[key as NavigationKey];
           const isActive = id === activeSection;
-          const label = t(key as NavigationKey);
 
           return (
             <li key={id}>

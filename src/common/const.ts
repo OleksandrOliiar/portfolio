@@ -8,18 +8,22 @@ export const navigationItems = {
   home: {
     id: "home",
     href: "#home",
+    label: 'Home'
   },
   projects: {
     id: "projects",
     href: "#projects",
+    label: 'Projects'
   },
   skills: {
     id: "skills",
     href: "#skills",
+    label: 'Skills'
   },
   contacts: {
     id: "contacts",
     href: "#contacts",
+    label: 'Contacts'
   },
 } as const;
 

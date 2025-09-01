@@ -3,13 +3,8 @@ import { ThemeProvider } from "./Theme";
 import { Toaster } from "@/ui";
 import { LuCheck, LuX } from "react-icons/lu";
 import ActiveSectionProvider from "./ActiveSection";
-import { I18nProviderClient } from "@/lib/i18n/client";
 
-type Props = {
-  locale: string;
-} & PropsWithChildren;
-
-export default function RootLayout({ children, locale }: Props) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <ThemeProvider
       attribute="class"
@@ -17,7 +12,6 @@ export default function RootLayout({ children, locale }: Props) {
       enableSystem
       disableTransitionOnChange
     >
-      <I18nProviderClient locale={locale}>
         <Toaster
           icons={{
             success: (
@@ -40,7 +34,6 @@ export default function RootLayout({ children, locale }: Props) {
           }}
         />
         <ActiveSectionProvider>{children}</ActiveSectionProvider>
-      </I18nProviderClient>
     </ThemeProvider>
   );
 }
