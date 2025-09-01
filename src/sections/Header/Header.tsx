@@ -6,6 +6,8 @@ import Navigation from "./Navigation";
 import SidebarNavigation from "./SidebarNavigation";
 import ThemeToggle from "./ThemeToggle";
 import { motion } from "framer-motion";
+import { Button } from "@/ui";
+import Link from "next/link";
 
 export default function Header() {
   return (
@@ -25,6 +27,9 @@ export default function Header() {
         </div>
         <div className="flex items-center gap-3">
           <ThemeToggle />
+          <Button asChild>
+            <Link href="#contacts">Contact me</Link>
+          </Button>
         </div>
       </div>
     </motion.header>
