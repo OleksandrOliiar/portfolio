@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <motion.header
       {...animationVariants}
-      className="fixed left-0 top-0 z-50 w-full bg-background py-3"
+      className="fixed left-0 top-0 z-50 w-full border-b border-border/40 bg-background/80 py-3 backdrop-blur-md"
     >
       <div className="container flex items-center justify-between">
         <div className="flex items-center gap-3">

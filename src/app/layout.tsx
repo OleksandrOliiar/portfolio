@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Providers } from "@/providers";
 import { Header } from "@/sections/Header";
 import { ScrollToTop } from "@/ui";
+import { BackgroundEffects } from "@/components";
 import { ReactElement } from "react";
 
 import "./globals.css";
@@ -18,9 +19,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className}`}>
         <Providers>
-          <div className="relative flex min-h-screen flex-col overflow-hidden ">
+          <div className="relative flex min-h-screen flex-col">
+            <BackgroundEffects />
             <Header />
-            <main className="grow">{children}</main>
+            <main className="relative z-10 grow">{children}</main>
           </div>
           <ScrollToTop />
         </Providers>
