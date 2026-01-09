@@ -32,12 +32,11 @@ export default function ContactsInfo() {
 
   return (
     <div className="text-center md:text-start">
-      <p className="lead mb-10 leading-relaxed">
+      <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
         Feel free to reach out with any inquiries, collaborations, or projects!
         I&apos;m passionate about creating engaging web experiences and would
         love to connect with you.
       </p>
-
       <address className="flex flex-col items-center gap-4 md:items-start">
         {contactItems.map((item, index) => {
           const Icon = item.icon;

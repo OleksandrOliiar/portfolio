@@ -127,18 +127,6 @@ export default function BackgroundEffects() {
         }}
         className="absolute left-[12%] top-[75%] h-10 w-10 rounded-full border-2 border-indigo-500/20 bg-indigo-500/5 backdrop-blur-sm"
       />
-      <motion.div
-        animate={{
-          y: [0, 25, 0],
-          rotate: [0, -120, 0],
-        }}
-        transition={{
-          duration: 19,
-          repeat: Infinity,
-          ease: "linear",
-        }}
-        className="absolute right-[20%] top-[88%] h-16 w-16 rounded-lg border-2 border-cyan-500/20 bg-cyan-500/5 backdrop-blur-sm"
-      />
     </div>
   );
 }

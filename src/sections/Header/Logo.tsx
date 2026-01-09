@@ -19,8 +19,8 @@ export default function Logo() {
         </div>
         
         {/* Name text */}
-        <div className="hidden flex-col leading-tight sm:flex">
-          <span className="text-sm font-bold text-foreground">
+        <div className="text-sm hidden flex-col gap-0.5 leading-tight sm:flex">
+          <span className="font-bold text-foreground">
             Oleksandr Oliiar
           </span>
           <span className="text-xs text-muted-foreground">
