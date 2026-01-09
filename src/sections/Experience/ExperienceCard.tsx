@@ -23,7 +23,7 @@ export default function ExperienceCard({
   return (
     <div className="relative">
       {/* Card */}
-      <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 p-6 shadow-lg backdrop-blur-sm transition-all duration-300 md:ml-10">
+      <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 p-6 shadow-lg backdrop-blur-sm transition-all duration-300 ">
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
         {/* Content */}
@@ -60,12 +60,7 @@ export default function ExperienceCard({
 
           {/* Responsibilities section with header */}
           <div>
-            <div className="mb-4 flex items-center gap-2">
-              <h4 className="text-sm font-bold tracking-wider text-foreground">
-                Key Responsibilities
-              </h4>
-            </div>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {responsibilities.map((responsibility, index) => (
                 <motion.li
                   key={index}
@@ -75,8 +70,8 @@ export default function ExperienceCard({
                   transition={{ delay: index * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <FiCheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
-                  <span className="text-sm leading-relaxed text-muted-foreground">
+                  <FiCheckCircle className=" mt-[5.5px] h-4 w-4 flex-shrink-0 text-primary" />
+                  <span className="leading-relaxed text-muted-foreground">
                     {responsibility}
                   </span>
                 </motion.li>

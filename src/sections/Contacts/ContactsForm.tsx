@@ -54,7 +54,7 @@ export default function ContactsForm() {
   const { isSubmitting } = form.formState;
 
   return (
-    <div className="rounded-2xl border border-border/50 bg-card/50 p-6 shadow-xl backdrop-blur-sm sm:p-8">
+    <div className="rounded-2xl border border-border/50 bg-card/50 p-4 shadow-xl backdrop-blur-sm sm:p-6">
       {/* Decorative gradient */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
 
@@ -124,11 +124,7 @@ export default function ContactsForm() {
               </FormItem>
             )}
           />
-          <motion.div
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ type: "spring", stiffness: 400, damping: 17 }}
-          >
+          <div>
             <Button
               className="group w-full gap-2 text-base shadow-lg shadow-primary/25 sm:w-auto"
               disabled={isSubmitting}
@@ -142,11 +138,11 @@ export default function ContactsForm() {
               ) : (
                 <>
                   <span>Send Message</span>
-                  <LuSend className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  <LuSend className="h-5 w-5 transition-transform" />
                 </>
               )}
             </Button>
-          </motion.div>
+          </div>
         </form>
       </Form>
     </div>

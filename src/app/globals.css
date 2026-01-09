@@ -64,7 +64,7 @@ body {
 }
 
 .container {
-  @apply mx-auto max-w-[1000px] px-[15px];
+  @apply mx-auto max-w-[1200px] px-[15px];
 }
 
 h1 {

@@ -7,12 +7,10 @@ export default function Logo() {
   return (
     <Link href="#home" className="group relative">
       <motion.div
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
         className="flex items-center gap-3"
       >
         {/* Logo mark with initials */}
-        <div className="relative h-10 w-10 overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary/70 p-[2px] shadow-lg shadow-primary/30 transition-all duration-300 group-hover:shadow-xl group-hover:shadow-primary/40">
+        <div className="relative h-10 w-10 overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary/70 p-[2px] shadow-lg shadow-primary/30 transition-all duration-300 group-hover:shadow-primary/40">
           <div className="flex h-full w-full items-center justify-center rounded-[10px] bg-background">
             <span className="bg-gradient-to-br from-primary to-primary/70 bg-clip-text text-lg font-bold text-transparent">
               OO

@@ -28,49 +28,39 @@ export default function ProjectCard({
   direction,
 }: Props) {
   return (
-    <article className="group flex flex-col items-center gap-8 md:flex-row">
+    <article className="flex flex-col items-center gap-8 md:flex-row">
       {/* Image container with hover effects */}
-      <motion.div
+      <div
         className={cn(
-          "relative aspect-[9/6.1] w-full overflow-hidden rounded-2xl border border-border/50 bg-card/50 shadow-lg backdrop-blur-sm transition-all duration-500 md:basis-1/2",
+          "relative aspect-[9/6] w-full overflow-hidden rounded-2xl border border-border/50 bg-card/50 shadow-lg backdrop-blur-sm md:basis-1/2",
           {
             "md:order-2": direction === "ltr",
             "md:order-1": direction === "rtl",
           },
         )}
-        whileHover={{ y: -8, scale: 1.02 }}
-        transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
-        <Link href={siteLink} target="_blank" className="block h-full w-full">
+        <Link href={siteLink} target="_blank" className="group block h-full w-full">
           {/* Image with overlay */}
           <div className="relative h-full w-full">
             <Image
               src={image}
               alt={title}
               fill
-              className="absolute left-0 top-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+              className="absolute left-0 top-0 h-full w-full object-cover"
             />
-            {/* Gradient overlay on hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
             
-            {/* View project icon overlay */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover:opacity-100">
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                whileHover={{ scale: 1, opacity: 1 }}
-                className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/90 backdrop-blur-sm"
-              >
+            {/* Gradient overlay on hover */}
+            <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            
+            {/* View project icon overlay - always visible on hover */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary shadow-lg shadow-primary/50">
                 <FiArrowUpRight className="h-8 w-8 text-primary-foreground" />
-              </motion.div>
+              </div>
             </div>
           </div>
-
-          {/* Decorative corner accent */}
-          <div className="absolute right-0 top-0 h-20 w-20 overflow-hidden">
-            <div className="absolute -right-10 -top-10 h-20 w-20 rotate-45 bg-primary/10" />
-          </div>
         </Link>
-      </motion.div>
+      </div>
 
       {/* Content container */}
       <div
@@ -89,7 +79,7 @@ export default function ProjectCard({
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.1, y: -2 }}
-              className="rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary backdrop-blur-sm transition-all hover:border-primary/40 hover:bg-primary/20"
+              className="rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary backdrop-blur-sm transition-all"
             >
               {category}
             </motion.li>
@@ -112,28 +102,16 @@ export default function ProjectCard({
         {/* Action buttons */}
         <div className="flex items-center justify-center gap-3 md:justify-start">
           <Link href={siteLink} target="_blank">
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              <Button className="group/btn gap-2 shadow-md shadow-primary/25">
-                <FiExternalLink className="h-4 w-4 transition-transform group-hover/btn:rotate-12" />
-                <span>View Site</span>
-              </Button>
-            </motion.div>
+            <Button className="gap-2 shadow-md shadow-primary/25">
+              <FiExternalLink className="h-4 w-4" />
+              <span>View Site</span>
+            </Button>
           </Link>
           <Link href={githubLink} target="_blank">
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              <Button variant="secondary" className="group/btn gap-2 shadow-sm backdrop-blur-sm">
-                <LuGithub className="h-4 w-4 transition-transform group-hover/btn:rotate-12" />
-                <span>GitHub</span>
-              </Button>
-            </motion.div>
+            <Button variant="secondary" className="gap-2 shadow-sm backdrop-blur-sm">
+              <LuGithub className="h-4 w-4" />
+              <span>GitHub</span>
+            </Button>
           </Link>
         </div>
       </div>

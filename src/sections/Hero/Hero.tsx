@@ -99,31 +99,23 @@ export default function Hero() {
           className="flex flex-wrap items-center justify-center gap-4"
         >
           <Link href="#projects">
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
+            <div>
               <Button className="group gap-2 shadow-lg shadow-primary/25">
                 <span>View Projects</span>
-                <LuArrowDown className="h-5 w-5 transition-transform group-hover:translate-y-1" />
+                <LuArrowDown className="h-5 w-5 transition-transform" />
               </Button>
-            </motion.div>
+            </div>
           </Link>
           <Link href="/OleksandrOliiarCV.pdf" target="_blank">
-            <motion.div
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
+            <div>
               <Button
                 variant="secondary"
                 className="group gap-2 shadow-md backdrop-blur-sm"
               >
                 <span>Download CV</span>
-                <LuArrowDownToLine className="h-5 w-5 transition-transform group-hover:translate-y-1" />
+                <LuArrowDownToLine className="h-5 w-5 transition-transform" />
               </Button>
-            </motion.div>
+            </div>
           </Link>
         </motion.div>
       </motion.div>

@@ -48,7 +48,6 @@ export default function ContactsInfo() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ x: 5 }}
               className="group w-full"
             >
               <Link
@@ -57,7 +56,7 @@ export default function ContactsInfo() {
                 target={item.href.startsWith("http") ? "_blank" : undefined}
               >
                 {/* Icon container */}
-                <div className={`flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 transition-all duration-300 group-hover:scale-110 ${item.color}`}>
+                <div className={`flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 transition-all duration-300 ${item.color}`}>
                   <Icon className="h-6 w-6" />
                 </div>
 
