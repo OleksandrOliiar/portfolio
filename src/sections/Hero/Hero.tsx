@@ -3,7 +3,8 @@
 import { navigationItems } from "@/common/const";
 import { useSectionInView } from "@/common/hooks";
 import { Button } from "@/ui";
-import { LuArrowDown, LuArrowDownToLine, LuSparkles } from "react-icons/lu";
+import { LuArrowDown, LuArrowDownToLine } from "react-icons/lu";
+import { HiSparkles } from "react-icons/hi2";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -51,7 +52,7 @@ export default function Hero() {
         {/* Greeting badge */}
         <motion.div variants={itemVariants} className="mb-6 flex justify-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 backdrop-blur-sm">
-            <LuSparkles className="h-4 w-4 text-primary" />
+            <HiSparkles className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium">Welcome to my portfolio</span>
           </div>
         </motion.div>
