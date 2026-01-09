@@ -8,8 +8,8 @@ export default function Navigation() {
   const { activeSection, scrollToSection } = useActiveSection();
 
   return (
-    <nav className="rounded-3xl bg-secondary px-2.5 py-1.5">
-      <ul className="flex items-center gap-2 ">
+    <nav className="rounded-full border border-border/50 bg-card/50 px-3 py-2 shadow-lg backdrop-blur-md">
+      <ul className="flex items-center gap-1">
         {Object.keys(navigationItems).map((key) => {
           const { href, label, id } = navigationItems[key as NavigationKey];
           const isActive = id === activeSection;
@@ -19,9 +19,10 @@ export default function Navigation() {
               <Link
                 href={href}
                 className={cn(
-                  "relative z-20 inline-block rounded-3xl px-[15px] py-[5px] text-muted-foreground transition-all hover:text-foreground",
-                  isActive &&
-                    "text-primary-foreground hover:text-primary-foreground",
+                  "relative z-20 inline-block rounded-full px-4 py-2 text-sm font-medium transition-all hover:text-foreground",
+                  isActive
+                    ? "text-primary-foreground hover:text-primary-foreground"
+                    : "text-muted-foreground",
                 )}
                 onClick={() => scrollToSection(id)}
               >
@@ -29,7 +30,8 @@ export default function Navigation() {
                 {isActive && (
                   <motion.span
                     layoutId="activeSection"
-                    className="absolute inset-0 -z-10 rounded-3xl bg-primary"
+                    transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                    className="absolute inset-0 -z-10 rounded-full bg-primary shadow-md shadow-primary/30"
                   />
                 )}
               </Link>
