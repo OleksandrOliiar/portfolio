@@ -15,6 +15,11 @@ export const navigationItems = {
     href: "#projects",
     label: 'Projects'
   },
+  experience: {
+    id: "experience",
+    href: "#experience",
+    label: 'Experience'
+  },
   skills: {
     id: "skills",
     href: "#skills",

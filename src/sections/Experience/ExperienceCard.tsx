@@ -1,0 +1,90 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { FiCheckCircle, FiCalendar } from "react-icons/fi";
+
+type Props = {
+  role: string;
+  company: string;
+  period: string;
+  current: boolean;
+  responsibilities: string[];
+  isLast: boolean;
+};
+
+export default function ExperienceCard({
+  role,
+  company,
+  period,
+  current,
+  responsibilities,
+  isLast,
+}: Props) {
+  return (
+    <div className="relative">
+      {/* Card */}
+      <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 p-6 shadow-lg backdrop-blur-sm transition-all duration-300 md:ml-10">
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
+        {/* Content */}
+        <div className="relative z-10">
+          {/* Header */}
+          <div className="mb-5">
+            <div className="mb-3 flex flex-wrap items-start justify-between gap-3">
+              <div className="flex-1">
+                <h3 className="h3 mb-1 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+                  {role}
+                </h3>
+                <div className="text-xl font-bold text-primary">
+                  {company}
+                </div>
+              </div>
+              
+              {/* Date badge on the right */}
+              <div className="inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/10 px-4 py-2 backdrop-blur-sm">
+                <FiCalendar className="h-4 w-4 text-primary" />
+                <span className="whitespace-nowrap text-sm font-bold text-primary">
+                  {period}
+                </span>
+                {current && (
+                  <span className="relative ml-1 flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-5 h-px bg-gradient-to-r from-border via-border/50 to-transparent" />
+
+          {/* Responsibilities section with header */}
+          <div>
+            <div className="mb-4 flex items-center gap-2">
+              <h4 className="text-sm font-bold tracking-wider text-foreground">
+                Key Responsibilities
+              </h4>
+            </div>
+            <ul className="space-y-3">
+              {responsibilities.map((responsibility, index) => (
+                <motion.li
+                  key={index}
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="flex items-start gap-3"
+                >
+                  <FiCheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                  <span className="text-sm leading-relaxed text-muted-foreground">
+                    {responsibility}
+                  </span>
+                </motion.li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
