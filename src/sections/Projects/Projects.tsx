@@ -4,7 +4,7 @@ import { useTheme } from "next-themes";
 import ProjectCard from "./ProjectCard";
 import { ProjectKey, projects } from "./const";
 import { motion } from "framer-motion";
-import { navigationItems } from "@/common/const";
+import { itemVariants, navigationItems } from "@/common/const";
 import { useSectionInView } from "@/common/hooks";
 import { FaCode } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
@@ -21,19 +21,6 @@ export default function Projects() {
       transition: {
         staggerChildren: 0.2,
         delayChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50, filter: "blur(4px)" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: {
-        duration: 0.6,
-        ease: [0.22, 1, 0.36, 1],
       },
     },
   };

@@ -9,7 +9,6 @@ type Props = {
   period: string;
   current: boolean;
   responsibilities: string[];
-  isLast: boolean;
 };
 
 export default function ExperienceCard({
@@ -18,7 +17,6 @@ export default function ExperienceCard({
   period,
   current,
   responsibilities,
-  isLast,
 }: Props) {
   return (
     <div className="relative">

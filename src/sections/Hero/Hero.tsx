@@ -1,6 +1,6 @@
 "use client";
 
-import { navigationItems } from "@/common/const";
+import { itemVariants, navigationItems } from "@/common/const";
 import { useSectionInView } from "@/common/hooks";
 import { Button } from "@/ui";
 import { LuArrowDown, LuArrowDownToLine } from "react-icons/lu";
@@ -19,19 +19,6 @@ export default function Hero() {
       transition: {
         staggerChildren: 0.12,
         delayChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
-    visible: {
-      opacity: 1,
-      y: 0,
-      filter: "blur(0px)",
-      transition: {
-        duration: 0.8,
-        ease: [0.22, 1, 0.36, 1],
       },
     },
   };

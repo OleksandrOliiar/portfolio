@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import { LuMoon, LuSun } from "react-icons/lu";
 import { useTheme } from "next-themes";
