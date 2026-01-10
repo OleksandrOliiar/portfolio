@@ -1,9 +1,9 @@
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/ui";
+import { Sheet, SheetClose, SheetContent, SheetTrigger } from "@/common/ui";
 import { cn } from "@/common/utils";
 import { LuMenu } from "react-icons/lu";
 import Link from "next/link";
 import { NavigationKey, navigationItems } from "@/common/const";
-import { useActiveSection } from "@/providers";
+import { useActiveSection } from "@/common/providers";
 import { motion } from "framer-motion";
 
 export default function SidebarNavigation() {

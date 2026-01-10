@@ -50,7 +50,9 @@ export default function ContactsInfo() {
                 target={item.href.startsWith("http") ? "_blank" : undefined}
               >
                 {/* Icon container */}
-                <div className={`flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 transition-all duration-300 ${item.color}`}>
+                <div
+                  className={`flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 transition-all duration-300 ${item.color}`}
+                >
                   <Icon className="h-6 w-6" />
                 </div>
 

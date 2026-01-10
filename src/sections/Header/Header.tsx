@@ -6,7 +6,7 @@ import Navigation from "./Navigation";
 import SidebarNavigation from "./SidebarNavigation";
 import ThemeToggle from "./ThemeToggle";
 import { motion } from "framer-motion";
-import { Button } from "@/ui";
+import { Button } from "@/common/ui";
 import Link from "next/link";
 
 export default function Header() {
@@ -22,12 +22,12 @@ export default function Header() {
           <div className="flex items-center justify-start">
             <Logo />
           </div>
-          
+
           {/* Center section - Navigation */}
           <div className="flex justify-center">
             <Navigation />
           </div>
-          
+
           {/* Right section */}
           <div className="flex items-center justify-end gap-3">
             <ThemeToggle />

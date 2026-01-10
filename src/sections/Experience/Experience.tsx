@@ -1,6 +1,7 @@
 "use client";
 
-import { itemVariants, navigationItems } from "@/common/const";
+import { navigationItems } from "@/common/const";
+import { containerVariants, itemVariants } from "@/common/animations";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/common/hooks";
 import { HiSparkles } from "react-icons/hi2";
@@ -19,17 +20,6 @@ export default function Experience() {
       transition: {
         duration: 0.7,
         ease: [0.22, 1, 0.36, 1],
-      },
-    },
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.2,
       },
     },
   };
@@ -112,9 +102,7 @@ export default function Experience() {
       >
         {experiences.map((experience, index) => (
           <motion.div key={index} variants={itemVariants}>
-            <ExperienceCard 
-              {...experience} 
-            />
+            <ExperienceCard {...experience} />
           </motion.div>
         ))}
       </motion.div>

@@ -10,7 +10,7 @@ import {
   SiTailwindcss,
   SiSanity,
   SiGithub,
-  SiWebpack 
+  SiWebpack,
 } from "react-icons/si";
 
 export const skills = [

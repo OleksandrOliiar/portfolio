@@ -1,7 +1,7 @@
-import { useActiveSection } from "@/providers/ActiveSection";
+import { useActiveSection } from "@/common/providers/ActiveSection";
 import { useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-import { SectionId } from "./const";
+import { SectionId } from "../const";
 
 export const useSectionInView = (sectionId: SectionId, amount: number) => {
   const ref = useRef<HTMLElement>(null);

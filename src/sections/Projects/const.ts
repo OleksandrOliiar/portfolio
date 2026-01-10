@@ -20,7 +20,7 @@ export const projects = {
     categories: ["Next.js", "Prisma", "Pusher"],
     title: "Messenger",
     description:
-      'A group messaging app that uses Next.js and Pusher.js to enable realtime communication via text or file messages and audio-video conferences. It also allows users to have different roles in chats, such as viewer, editor or admin.',
+      "A group messaging app that uses Next.js and Pusher.js to enable realtime communication via text or file messages and audio-video conferences. It also allows users to have different roles in chats, such as viewer, editor or admin.",
     githubLink: "https://github.com/Fall3n4ngle/messenger",
     siteLink: "https://messanger-lovat.vercel.app/",
     image: {

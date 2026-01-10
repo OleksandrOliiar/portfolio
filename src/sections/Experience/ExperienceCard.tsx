@@ -33,11 +33,9 @@ export default function ExperienceCard({
                 <h3 className="h3 mb-1 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
                   {role}
                 </h3>
-                <div className="text-xl font-bold text-primary">
-                  {company}
-                </div>
+                <div className="text-xl font-bold text-primary">{company}</div>
               </div>
-              
+
               {/* Date badge on the right */}
               <div className="inline-flex items-center gap-2 rounded-lg border border-primary/30 bg-primary/10 px-4 py-2 backdrop-blur-sm">
                 <FiCalendar className="h-4 w-4 text-primary" />

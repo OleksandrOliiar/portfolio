@@ -13,7 +13,7 @@ import {
   FormMessage,
   Input,
   Textarea,
-} from "@/ui";
+} from "@/common/ui";
 import { cn } from "@/common/utils";
 import { LuLoader, LuSend } from "react-icons/lu";
 import { sendEmail } from "./actions";

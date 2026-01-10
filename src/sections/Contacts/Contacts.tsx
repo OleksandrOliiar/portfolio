@@ -1,6 +1,7 @@
 "use client";
 
-import { itemVariants, navigationItems } from "@/common/const";
+import { navigationItems } from "@/common/const";
+import { containerVariants, itemVariants } from "@/common/animations";
 import ContactsForm from "./ContactsForm";
 import ContactsInfo from "./ContactsInfo";
 import { motion } from "framer-motion";
@@ -19,17 +20,6 @@ export default function Contacts() {
       transition: {
         duration: 0.7,
         ease: [0.22, 1, 0.36, 1],
-      },
-    },
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2,
       },
     },
   };
@@ -118,7 +108,7 @@ export default function Contacts() {
         </motion.div>
         <motion.div
           variants={itemVariants}
-          className="w-full min-[810px]:mt-7 sm:basis-1/2"
+          className="w-full sm:basis-1/2 min-[810px]:mt-7"
         >
           <ContactsInfo />
         </motion.div>

@@ -1,6 +1,6 @@
 import { NavigationKey, navigationItems } from "@/common/const";
 import { cn } from "@/common/utils";
-import { useActiveSection } from "@/providers";
+import { useActiveSection } from "@/common/providers";
 import Link from "next/link";
 import { motion } from "framer-motion";
 

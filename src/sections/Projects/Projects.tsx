@@ -1,10 +1,11 @@
 "use client";
- 
+
 import { useTheme } from "next-themes";
 import ProjectCard from "./ProjectCard";
 import { ProjectKey, projects } from "./const";
 import { motion } from "framer-motion";
-import { itemVariants, navigationItems } from "@/common/const";
+import { navigationItems } from "@/common/const";
+import { containerVariants, itemVariants } from "@/common/animations";
 import { useSectionInView } from "@/common/hooks";
 import { FaCode } from "react-icons/fa";
 import { HiSparkles } from "react-icons/hi2";
@@ -12,18 +13,6 @@ import { HiSparkles } from "react-icons/hi2";
 export default function Projects() {
   const { theme } = useTheme();
   const { ref } = useSectionInView("projects", 0.25);
-
-  // Container animation for staggered children
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
-      },
-    },
-  };
 
   const headingVariants = {
     hidden: { opacity: 0, y: 30 },

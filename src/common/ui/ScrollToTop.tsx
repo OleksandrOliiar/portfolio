@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Button } from "./Button";
 import { LuChevronsUp } from "react-icons/lu";
 import { AnimatePresence, motion } from "framer-motion";
-import { useActiveSection } from "@/providers";
+import { useActiveSection } from "@/common/providers";
 import Link from "next/link";
 
 export function ScrollToTop() {

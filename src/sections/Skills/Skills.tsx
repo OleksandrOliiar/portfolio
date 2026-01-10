@@ -7,21 +7,10 @@ import { useSectionInView } from "@/common/hooks";
 import SkillCard from "./SkillCard";
 import { HiSparkles } from "react-icons/hi2";
 import { FaTools } from "react-icons/fa";
+import { containerVariants } from "@/common/animations";
 
 export default function Skills() {
   const { ref } = useSectionInView("skills", 1);
-
-  // Container animation for staggered children
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.05,
-        delayChildren: 0.1,
-      },
-    },
-  };
 
   const headingVariants = {
     hidden: { opacity: 0, y: 30 },

@@ -1,7 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import { Button } from "@/ui";
+import { Button } from "@/common/ui";
 import Link from "next/link";
 import { cn } from "@/common/utils";
 import { motion } from "framer-motion";
@@ -39,7 +39,11 @@ export default function ProjectCard({
           },
         )}
       >
-        <Link href={siteLink} target="_blank" className="group block h-full w-full">
+        <Link
+          href={siteLink}
+          target="_blank"
+          className="group block h-full w-full"
+        >
           {/* Image with overlay */}
           <div className="relative h-full w-full">
             <Image
@@ -48,10 +52,10 @@ export default function ProjectCard({
               fill
               className="absolute left-0 top-0 h-full w-full object-cover"
             />
-            
+
             {/* Gradient overlay on hover */}
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-            
+
             {/* View project icon overlay - always visible on hover */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
               <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary shadow-lg shadow-primary/50">
@@ -107,7 +111,10 @@ export default function ProjectCard({
             </Button>
           </Link>
           <Link href={githubLink} target="_blank">
-            <Button variant="secondary" className="gap-2 shadow-sm backdrop-blur-sm">
+            <Button
+              variant="secondary"
+              className="gap-2 shadow-sm backdrop-blur-sm"
+            >
               <LuGithub className="h-4 w-4" />
               <span>GitHub</span>
             </Button>

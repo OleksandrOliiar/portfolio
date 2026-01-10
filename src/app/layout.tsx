@@ -1,20 +1,16 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import { Providers } from "@/providers";
+import { Providers } from "@/common/providers";
 import { Header } from "@/sections/Header";
-import { ScrollToTop } from "@/ui";
-import { BackgroundEffects } from "@/components";
+import { ScrollToTop } from "@/common/ui";
+import { BackgroundEffects } from "@/common/components";
 import { ReactElement } from "react";
 
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactElement;
-}) {
+export default function RootLayout({ children }: { children: ReactElement }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className}`}>
@@ -39,7 +35,8 @@ export const generateMetadata = async ({
   return {
     metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
     title: "Oleksandr - Frontend Developer",
-    description: "Welcome to my personal portfolio website, a showcase of my skills demonstrated through my projects, complete with contact information",
+    description:
+      "Welcome to my personal portfolio website, a showcase of my skills demonstrated through my projects, complete with contact information",
     twitter: {
       card: "summary_large_image",
     },
@@ -51,7 +48,8 @@ export const generateMetadata = async ({
     },
     openGraph: {
       title: "Oleksandr - Frontend Developer",
-      description: "Welcome to my personal portfolio website, a showcase of my skills demonstrated through my projects, complete with contact information",
+      description:
+        "Welcome to my personal portfolio website, a showcase of my skills demonstrated through my projects, complete with contact information",
       locale,
       authors: {
         name: "Oleksandr Oliiar",

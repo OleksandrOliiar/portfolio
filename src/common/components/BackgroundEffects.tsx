@@ -18,7 +18,7 @@ export default function BackgroundEffects() {
   };
 
   return (
-    <div className="pointer-events-none absolute left-0 top-0 -z-10 h-full w-full min-h-screen overflow-hidden">
+    <div className="pointer-events-none absolute left-0 top-0 -z-10 h-full min-h-screen w-full overflow-hidden">
       {/* Animated gradient orbs - distributed throughout the page */}
       <motion.div
         variants={orbVariants}
@@ -38,7 +38,7 @@ export default function BackgroundEffects() {
         className="absolute left-1/2 top-[35%] h-[300px] w-[300px] -translate-x-1/2 rounded-full bg-purple-500/10 blur-[100px]"
         style={{ animationDelay: "4s" }}
       />
-      
+
       {/* Middle section orbs */}
       <motion.div
         variants={orbVariants}
@@ -49,21 +49,21 @@ export default function BackgroundEffects() {
       <motion.div
         variants={orbVariants}
         animate="animate"
-        className="absolute -right-32 top-[65%] h-[320px] w-[320px] rounded-full bg-indigo-500/12 blur-[100px]"
+        className="bg-indigo-500/12 absolute -right-32 top-[65%] h-[320px] w-[320px] rounded-full blur-[100px]"
         style={{ animationDelay: "3.5s" }}
       />
-      
+
       {/* Bottom section orbs */}
       <motion.div
         variants={orbVariants}
         animate="animate"
-        className="absolute left-1/4 top-[85%] h-[350px] w-[350px] rounded-full bg-cyan-500/12 blur-[100px]"
+        className="bg-cyan-500/12 absolute left-1/4 top-[85%] h-[350px] w-[350px] rounded-full blur-[100px]"
         style={{ animationDelay: "2.5s" }}
       />
 
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:64px_64px]" />
-      
+
       {/* Floating geometric shapes - distributed throughout the page */}
       <motion.div
         animate={{
@@ -101,7 +101,7 @@ export default function BackgroundEffects() {
         }}
         className="absolute right-[15%] top-[45%] h-12 w-12 rotate-45 border-2 border-purple-500/20 bg-purple-500/5 backdrop-blur-sm"
       />
-      
+
       {/* Middle and bottom shapes */}
       <motion.div
         animate={{

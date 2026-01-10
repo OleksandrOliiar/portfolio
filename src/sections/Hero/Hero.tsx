@@ -1,8 +1,9 @@
 "use client";
 
-import { itemVariants, navigationItems } from "@/common/const";
+import { navigationItems } from "@/common/const";
+import { containerVariants, itemVariants } from "@/common/animations";
 import { useSectionInView } from "@/common/hooks";
-import { Button } from "@/ui";
+import { Button } from "@/common/ui";
 import { LuArrowDown, LuArrowDownToLine } from "react-icons/lu";
 import { HiSparkles } from "react-icons/hi2";
 import Link from "next/link";
@@ -10,18 +11,6 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   const { ref } = useSectionInView("home", 0.75);
-
-  // Staggered container for text
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.12,
-        delayChildren: 0.1,
-      },
-    },
-  };
 
   return (
     <section
@@ -37,7 +26,10 @@ export default function Hero() {
         className="relative z-10 mx-auto max-w-[850px] text-center"
       >
         {/* Greeting badge */}
-        <motion.div variants={itemVariants} className="mb-6 flex justify-center">
+        <motion.div
+          variants={itemVariants}
+          className="mb-6 flex justify-center"
+        >
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 backdrop-blur-sm">
             <HiSparkles className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium">Welcome to my portfolio</span>
@@ -69,10 +61,14 @@ export default function Hero() {
           variants={itemVariants}
           className="lead mx-auto mb-8 max-w-[700px] leading-relaxed"
         >
-          I have <strong className="font-semibold text-foreground">3 years of experience</strong> building responsive, optimized, SEO-friendly and accessible
-          web applications using{" "}
-          <strong className="font-semibold text-foreground">React.js</strong> and{" "}
-          <strong className="font-semibold text-foreground">Next.js</strong>
+          I have{" "}
+          <strong className="font-semibold text-foreground">
+            3 years of experience
+          </strong>{" "}
+          building responsive, optimized, SEO-friendly and accessible web
+          applications using{" "}
+          <strong className="font-semibold text-foreground">React.js</strong>{" "}
+          and <strong className="font-semibold text-foreground">Next.js</strong>
         </motion.p>
 
         {/* Enhanced CTA buttons */}
