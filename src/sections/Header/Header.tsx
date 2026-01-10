@@ -1,6 +1,5 @@
 "use client";
 
-import { animationVariants } from "@/common/const";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
 import SidebarNavigation from "./SidebarNavigation";
@@ -8,6 +7,12 @@ import ThemeToggle from "./ThemeToggle";
 import { motion } from "framer-motion";
 import { Button } from "@/common/ui";
 import Link from "next/link";
+
+const animationVariants = {
+  initial: { opacity: 0, y: 100 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { amount: "some", once: true },
+} as const
 
 export default function Header() {
   return (
