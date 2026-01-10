@@ -82,12 +82,7 @@ export default function Hero() {
           variants={itemVariants}
           className="lead mx-auto mb-8 max-w-[700px] leading-relaxed"
         >
-          I specialize in building{" "}
-          <strong className="font-semibold text-foreground">modern</strong>,{" "}
-          <strong className="font-semibold text-foreground">responsive</strong>,{" "}
-          <strong className="font-semibold text-foreground">fast</strong>,{" "}
-          <strong className="font-semibold text-foreground">seo-friendly</strong> and{" "}
-          <strong className="font-semibold text-foreground">accessible</strong>{" "}
+          I have <strong className="font-semibold text-foreground">3 years of experience</strong> building responsive, optimized, SEO-friendly and accessible
           web applications using{" "}
           <strong className="font-semibold text-foreground">React.js</strong> and{" "}
           <strong className="font-semibold text-foreground">Next.js</strong>

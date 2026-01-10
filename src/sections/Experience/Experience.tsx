@@ -82,10 +82,6 @@ export default function Experience() {
             />
           </span>
         </h2>
-        <p className="lead mx-auto max-w-[600px]">
-          My professional journey in frontend development
-        </p>
-
         {/* Decorative sparkle icons */}
         <motion.div
           animate={{

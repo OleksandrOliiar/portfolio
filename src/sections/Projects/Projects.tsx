@@ -86,10 +86,6 @@ export default function Projects() {
             />
           </span>
         </h2>
-        <p className="lead mx-auto max-w-[600px]">
-          A collection of projects showcasing my skills in modern web development
-        </p>
-
         {/* Decorative sparkle icons */}
         <motion.div
           animate={{

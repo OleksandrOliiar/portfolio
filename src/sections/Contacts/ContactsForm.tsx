@@ -76,7 +76,6 @@ export default function ContactsForm() {
                   <Input
                     {...field}
                     className="border-border/50 bg-background/50 backdrop-blur-sm transition-all focus:border-primary/50 focus:bg-background"
-                    placeholder="Your name"
                   />
                 </FormControl>
                 <FormMessage />
@@ -96,7 +95,6 @@ export default function ContactsForm() {
                   <Input
                     {...field}
                     className="border-border/50 bg-background/50 backdrop-blur-sm transition-all focus:border-primary/50 focus:bg-background"
-                    placeholder="your.email@example.com"
                   />
                 </FormControl>
                 <FormMessage />
@@ -117,7 +115,6 @@ export default function ContactsForm() {
                     {...field}
                     rows={5}
                     className="border-border/50 bg-background/50 backdrop-blur-sm transition-all focus:border-primary/50 focus:bg-background"
-                    placeholder="Tell me about your project or just say hi!"
                   />
                 </FormControl>
                 <FormMessage />

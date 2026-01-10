@@ -71,10 +71,6 @@ export default function Skills() {
             />
           </span>
         </h2>
-        <p className="lead mx-auto max-w-[600px]">
-          Technologies and tools I use to bring ideas to life
-        </p>
-
         {/* Decorative sparkle icons */}
         <motion.div
           animate={{

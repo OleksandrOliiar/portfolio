@@ -50,7 +50,7 @@ export default function Contacts() {
     <section
       ref={ref}
       id={navigationItems.contacts.id}
-      className="relative mx-auto mb-20 max-w-[487px] scroll-mt-24 md:mx-0 md:max-w-fit"
+      className="relative mx-auto mb-20 scroll-mt-24 md:mx-0"
     >
       {/* Section header with decorative elements */}
       <motion.div
@@ -82,10 +82,6 @@ export default function Contacts() {
             />
           </span>
         </h2>
-        <p className="lead mx-auto max-w-[600px]">
-          Have a project in mind or just want to chat? Drop me a message!
-        </p>
-
         {/* Decorative sparkle icons */}
         <motion.div
           animate={{
