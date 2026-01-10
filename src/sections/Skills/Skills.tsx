@@ -30,7 +30,7 @@ export default function Skills() {
         viewport={{ once: true, amount: 0.2 }}
         className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 md:grid-cols-4 md:gap-6 lg:grid-cols-6"
       >
-        {skills.map((skill, id) => (
+        {skills.map(({ id, ...skill }) => (
           <motion.li
             key={id}
             variants={{
@@ -46,7 +46,7 @@ export default function Skills() {
               },
             }}
           >
-            <SkillCard {...skill} />
+            <SkillCard skill={skill} />
           </motion.li>
         ))}
       </motion.ul>

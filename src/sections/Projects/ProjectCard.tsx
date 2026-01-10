@@ -1,32 +1,26 @@
-"use client";
-
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { Button } from "@/common/ui";
 import Link from "next/link";
 import { cn } from "@/common/utils";
 import { motion } from "framer-motion";
 import { LuGithub } from "react-icons/lu";
 import { FiExternalLink, FiArrowUpRight } from "react-icons/fi";
+import { Project } from "./const";
+import { useTheme } from "next-themes";
 
-type Props = {
-  direction: "rtl" | "ltr";
-  image: StaticImageData;
-  categories: string[];
-  title: string;
-  description: string;
-  siteLink: string;
-  githubLink: string;
-};
+export type ProjectDirection = "rtl" | "ltr";
+interface ProjectCardProps {
+  project: Omit<Project, "id">;
+  direction: ProjectDirection;
+}
 
-export default function ProjectCard({
-  categories,
-  description,
-  githubLink,
-  image,
-  siteLink,
-  title,
-  direction,
-}: Props) {
+export default function ProjectCard({ direction, project }: ProjectCardProps) {
+  const { theme } = useTheme();
+  const { categories, description, githubLink, image, siteLink, title } =
+    project;
+
+  const themedImage = theme === "dark" ? image.dark : image.light;
+
   return (
     <article className="flex flex-col items-center gap-8 md:flex-row">
       {/* Image container with hover effects */}
@@ -47,7 +41,7 @@ export default function ProjectCard({
           {/* Image with overlay */}
           <div className="relative h-full w-full">
             <Image
-              src={image}
+              src={themedImage}
               alt={title}
               fill
               className="absolute left-0 top-0 h-full w-full object-cover"

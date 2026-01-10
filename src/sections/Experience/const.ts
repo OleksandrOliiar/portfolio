@@ -1,5 +1,15 @@
-export const experiences = [
+export interface Experience {
+  id: string;
+  role: string;
+  company: string;
+  period: string;
+  current: boolean;
+  responsibilities: string[];
+}
+
+export const experiences: Experience[] = [
   {
+    id: "incode",
     role: "Front end developer",
     company: "Incode Group",
     period: "April 2024 - Present",
@@ -13,6 +23,7 @@ export const experiences = [
     ],
   },
   {
+    id: "vatra",
     role: "Junior React developer",
     company: "Vatra",
     period: "May 2022 - April 2024",

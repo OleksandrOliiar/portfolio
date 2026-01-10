@@ -12,7 +12,7 @@ const animationVariants = {
   initial: { opacity: 0, y: 100 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { amount: "some", once: true },
-} as const
+} as const;
 
 export default function Header() {
   return (

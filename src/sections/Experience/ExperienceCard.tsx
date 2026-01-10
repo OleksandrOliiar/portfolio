@@ -1,29 +1,20 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { FiCheckCircle, FiCalendar } from "react-icons/fi";
+import { Experience } from "./const";
 
-type Props = {
-  role: string;
-  company: string;
-  period: string;
-  current: boolean;
-  responsibilities: string[];
-};
+interface ExperienceCardProps {
+  experience: Omit<Experience, "id">;
+}
 
-export default function ExperienceCard({
-  role,
-  company,
-  period,
-  current,
-  responsibilities,
-}: Props) {
+export default function ExperienceCard({ experience }: ExperienceCardProps) {
+  const { company, current, period, responsibilities, role } = experience;
+
   return (
     <div className="relative">
       {/* Card */}
-      <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 p-6 shadow-lg backdrop-blur-sm transition-all duration-300 ">
+      <div className="relative overflow-hidden rounded-2xl border border-border/70 bg-card/70 p-6 shadow-xl backdrop-blur-md transition-all duration-300 ">
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
+        <div className="from-primary/8 absolute inset-0 bg-gradient-to-br via-transparent to-transparent" />
         {/* Content */}
         <div className="relative z-10">
           {/* Header */}

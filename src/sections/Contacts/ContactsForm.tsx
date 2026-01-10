@@ -54,9 +54,9 @@ export default function ContactsForm() {
   const { isSubmitting } = form.formState;
 
   return (
-    <div className="rounded-2xl border border-border/50 bg-card/50 p-4 shadow-xl backdrop-blur-sm sm:p-6">
+    <div className="rounded-2xl border border-border/70 bg-card/70 p-4 shadow-xl backdrop-blur-md sm:p-6">
       {/* Decorative gradient */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
+      <div className="from-primary/8 absolute inset-0 rounded-2xl bg-gradient-to-br via-transparent to-transparent" />
 
       <Form {...form}>
         <form
@@ -73,10 +73,7 @@ export default function ContactsForm() {
                   <span className={cn(error && "text-destructive")}>*</span>
                 </FormLabel>
                 <FormControl>
-                  <Input
-                    {...field}
-                    className="border-border/50 bg-background/50 backdrop-blur-sm transition-all focus:border-primary/50 focus:bg-background"
-                  />
+                  <Input {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -92,10 +89,7 @@ export default function ContactsForm() {
                   <span className={cn(error && "text-destructive")}>*</span>
                 </FormLabel>
                 <FormControl>
-                  <Input
-                    {...field}
-                    className="border-border/50 bg-background/50 backdrop-blur-sm transition-all focus:border-primary/50 focus:bg-background"
-                  />
+                  <Input {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -111,11 +105,7 @@ export default function ContactsForm() {
                   <span className={cn(error && "text-destructive")}>*</span>
                 </FormLabel>
                 <FormControl>
-                  <Textarea
-                    {...field}
-                    rows={5}
-                    className="border-border/50 bg-background/50 backdrop-blur-sm transition-all focus:border-primary/50 focus:bg-background"
-                  />
+                  <Textarea {...field} rows={5} />
                 </FormControl>
                 <FormMessage />
               </FormItem>

@@ -1,11 +1,12 @@
-import { IconType } from "react-icons/lib";
+import { Skill } from "./const";
 
-type Props = {
-  title: string;
-  Icon: IconType;
-};
+interface SkillCardProps {
+  skill: Omit<Skill, "id">;
+}
 
-export default function SkillCard({ Icon, title }: Props) {
+export default function SkillCard({ skill }: SkillCardProps) {
+  const { Icon, title } = skill;
+
   return (
     <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 p-6 shadow-lg backdrop-blur-sm">
       {/* Subtle gradient overlay */}

@@ -30,9 +30,9 @@ export default function Experience() {
         viewport={{ once: true, amount: 0.1 }}
         className="relative space-y-8"
       >
-        {experiences.map((experience, index) => (
-          <motion.div key={index} variants={itemVariants}>
-            <ExperienceCard {...experience} />
+        {experiences.map(({ id, ...experience }) => (
+          <motion.div key={id} variants={itemVariants}>
+            <ExperienceCard experience={experience} />
           </motion.div>
         ))}
       </motion.div>

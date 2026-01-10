@@ -2,9 +2,24 @@ import messengerDark from "@/assets/projects/messenger-dark.png";
 import messengerLight from "@/assets/projects/messenger-light.png";
 import ecommerceLight from "@/assets/projects/ecommerce-light.png";
 import ecommerceDark from "@/assets/projects/ecommerce-dark.png";
+import { StaticImageData } from "next/image";
 
-export const projects = {
-  ecommerce: {
+export interface Project {
+  id: string;
+  categories: string[];
+  title: string;
+  description: string;
+  githubLink: string;
+  siteLink: string;
+  image: {
+    light: StaticImageData;
+    dark: StaticImageData;
+  };
+}
+
+export const projects: Project[] = [
+  {
+    id: "ecommerce",
     categories: ["Next.js", "Sanity", "Stripe"],
     title: "Ecommerce",
     description:
@@ -16,7 +31,8 @@ export const projects = {
       dark: ecommerceDark,
     },
   },
-  messenger: {
+  {
+    id: "messenger",
     categories: ["Next.js", "Prisma", "Pusher"],
     title: "Messenger",
     description:
@@ -28,6 +44,4 @@ export const projects = {
       dark: messengerDark,
     },
   },
-};
-
-export type ProjectKey = keyof typeof projects;
+];
