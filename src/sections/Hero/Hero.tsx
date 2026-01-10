@@ -3,7 +3,7 @@
 import { navigationItems } from "@/common/const";
 import { containerVariants, itemVariants } from "@/common/animations";
 import { useSectionInView } from "@/common/hooks";
-import { Button } from "@/common/ui";
+import { Badge, Button } from "@/common/ui";
 import { LuArrowDown, LuArrowDownToLine } from "react-icons/lu";
 import { HiSparkles } from "react-icons/hi2";
 import Link from "next/link";
@@ -30,10 +30,10 @@ export default function Hero() {
           variants={itemVariants}
           className="mb-6 flex justify-center"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 backdrop-blur-sm">
-            <HiSparkles className="h-4 w-4 text-primary" />
-            <span className="text-sm font-medium">Welcome to my portfolio</span>
-          </div>
+          <Badge
+            icon={<HiSparkles className="h-4 w-4 text-primary" />}
+            title="Welcome to my portfolio"
+          />
         </motion.div>
 
         <motion.h3 variants={itemVariants} className="h3 mb-3">
