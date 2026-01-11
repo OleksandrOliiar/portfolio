@@ -32,8 +32,8 @@ export const contactsItems: ContactsItem[] = [
     id: "phone",
     icon: LuPhone,
     label: "Phone",
-    value: "+38 (098) 025 3732",
-    href: "tel:+380980253732",
+    value: "+1 (647) 889-6507",
+    href: "tel:+16478896507",
     color: "text-green-500",
   },
 ] as const;

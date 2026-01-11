@@ -2,16 +2,17 @@ import { IconType } from "react-icons/lib";
 import {
   SiHtml5,
   SiCss3,
-  SiSass,
   SiJavascript,
   SiReact,
   SiRedux,
   SiTypescript,
   SiNextdotjs,
-  SiTailwindcss,
-  SiSanity,
   SiGithub,
   SiWebpack,
+  SiShadcnui,
+  SiTestinglibrary,
+  SiReactquery,
+  SiNodedotjs 
 } from "react-icons/si";
 
 export interface Skill {
@@ -32,24 +33,9 @@ export const skills: Skill[] = [
     Icon: SiCss3,
   },
   {
-    id: "sass",
-    title: "Sass",
-    Icon: SiSass,
-  },
-  {
     id: "javascript",
     title: "Javascript",
     Icon: SiJavascript,
-  },
-  {
-    id: "react",
-    title: "React.js",
-    Icon: SiReact,
-  },
-  {
-    id: "redux",
-    title: "Redux",
-    Icon: SiRedux,
   },
   {
     id: "typescript",
@@ -57,24 +43,39 @@ export const skills: Skill[] = [
     Icon: SiTypescript,
   },
   {
+    id: "react",
+    title: "React.js",
+    Icon: SiReact,
+  },
+  {
     id: "nextjs",
     title: "Next.js",
     Icon: SiNextdotjs,
   },
   {
-    id: "tailwind",
-    title: "Tailwind",
-    Icon: SiTailwindcss,
+    id: "redux",
+    title: "Redux",
+    Icon: SiRedux,
   },
   {
-    id: "sanity",
-    title: "Sanity",
-    Icon: SiSanity,
+    id: "reactQuery",
+    title: "React Query",
+    Icon: SiReactquery,
+  },
+  {
+    id: "testing",
+    title: "Testing",
+    Icon: SiTestinglibrary,
   },
   {
     id: "webpack",
     title: "Webpack",
     Icon: SiWebpack,
+  },
+  {
+    id: "nodejs",
+    title: "Node.js",
+    Icon: SiNodedotjs,
   },
   {
     id: "github",
