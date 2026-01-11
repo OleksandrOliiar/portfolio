@@ -8,7 +8,7 @@ export default function Navigation() {
   const { activeSection, scrollToSection } = useActiveSection();
 
   return (
-    <nav className="rounded-full border border-border/50 bg-card/50 px-3 py-2 shadow-lg backdrop-blur-md">
+    <nav className="rounded-full border border-border/50 bg-card/70 px-3 py-2 shadow-lg backdrop-blur-md">
       <ul className="flex items-center gap-1">
         {Object.keys(navigationItems).map((key) => {
           const { href, label, id } = navigationItems[key as NavigationKey];

@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { LuGithub } from "react-icons/lu";
 import { FiExternalLink, FiArrowUpRight } from "react-icons/fi";
 import { Project } from "./const";
-import { useTheme } from "next-themes";
 
 export type ProjectDirection = "rtl" | "ltr";
 interface ProjectCardProps {
@@ -15,11 +14,8 @@ interface ProjectCardProps {
 }
 
 export default function ProjectCard({ direction, project }: ProjectCardProps) {
-  const { theme } = useTheme();
   const { categories, description, githubLink, image, siteLink, title } =
     project;
-
-  const themedImage = theme === "dark" ? image.dark : image.light;
 
   return (
     <article className="flex flex-col items-center gap-8 md:flex-row">
@@ -38,13 +34,21 @@ export default function ProjectCard({ direction, project }: ProjectCardProps) {
           target="_blank"
           className="group block h-full w-full"
         >
-          {/* Image with overlay */}
+          {/* Image with overlay - CSS-only theme switching */}
           <div className="relative h-full w-full">
+            {/* Light theme image */}
             <Image
-              src={themedImage}
+              src={image.light}
               alt={title}
               fill
-              className="absolute left-0 top-0 h-full w-full object-cover"
+              className="absolute left-0 top-0 h-full w-full object-cover dark:hidden"
+            />
+            {/* Dark theme image */}
+            <Image
+              src={image.dark}
+              alt={title}
+              fill
+              className="absolute left-0 top-0 hidden h-full w-full object-cover dark:block"
             />
 
             {/* Gradient overlay on hover */}
