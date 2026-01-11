@@ -1,7 +1,7 @@
 "use client";
 
 import { navigationItems } from "@/common/const";
-import { containerVariants, itemVariants } from "@/common/animations";
+import { itemVariants } from "@/common/animations";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/common/hooks";
 import { FaBriefcase } from "react-icons/fa";
@@ -40,7 +40,7 @@ export default function Experience() {
         </div>
 
         <div className="space-y-8">
-          {experiences.map(({ id, ...experience }) => (
+          {experiences.map(({ id, icon: Icon, ...experience }) => (
             <motion.div
               key={id}
               variants={itemVariants}
@@ -50,7 +50,7 @@ export default function Experience() {
               className="relative"
             >
               <div className="absolute -left-1 top-6 z-10 hidden md:left-0 md:block">
-                <TimeLineNode isCurrent={experience.current} />
+                <TimeLineNode isCurrent={experience.current} Icon={Icon} />
               </div>
               <div className="md:pl-14">
                 <ExperienceCard experience={experience} />

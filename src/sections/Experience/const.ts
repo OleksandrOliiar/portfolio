@@ -1,3 +1,6 @@
+import { IconType } from "react-icons/lib";
+import { FaChrome, FaReact } from "react-icons/fa";
+
 export interface Experience {
   id: string;
   role: string;
@@ -5,6 +8,7 @@ export interface Experience {
   period: string;
   current: boolean;
   responsibilities: string[];
+  icon: IconType;
 }
 
 export const experiences: Experience[] = [
@@ -14,6 +18,7 @@ export const experiences: Experience[] = [
     company: "Incode Group",
     period: "April 2024 - Present",
     current: true,
+    icon: FaChrome,
     responsibilities: [
       "Built modular, accessible interfaces using **React**, **TypeScript**, and **Next.js**, translating design requirements into reusable components and responsive layouts",
       "Implemented scalable state management with **Redux Toolkit**, **Zustand**, and **TanStack Query**, improving data consistency and performance",
@@ -30,6 +35,7 @@ export const experiences: Experience[] = [
     company: "Vatra",
     period: "May 2022 - April 2024",
     current: false,
+    icon: FaReact,
     responsibilities: [
       "Contributed to feature development using **JavaScript**, **TypeScript**, **React**, **HTML5**, and **CSS3**",
       "Debugged and resolved functional, UI, and integration issues, improving stability and usability",

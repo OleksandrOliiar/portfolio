@@ -4,7 +4,7 @@ import { HighlightedText } from "@/common/components";
 import { Experience } from "./const";
 
 interface ExperienceCardProps {
-  experience: Omit<Experience, "id">;
+  experience: Omit<Experience, "id" | "icon">;
 }
 
 export default function ExperienceCard({ experience }: ExperienceCardProps) {

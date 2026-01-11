@@ -1,11 +1,12 @@
-import { FaBriefcase } from "react-icons/fa";
+import { IconType } from "react-icons/lib";
 import { cn } from "@/common/utils";
 
 interface TimeLineNodeProps {
   isCurrent: boolean;
+  Icon: IconType;
 }
 
-export default function TimeLineNode({ isCurrent }: TimeLineNodeProps) {
+export default function TimeLineNode({ isCurrent, Icon }: TimeLineNodeProps) {
   return (
     <div className="relative flex h-9 w-9 items-center justify-center">
       {isCurrent && (
@@ -19,7 +20,7 @@ export default function TimeLineNode({ isCurrent }: TimeLineNodeProps) {
             : "border-primary/50 bg-card"
         )}
       >
-        <FaBriefcase
+        <Icon
           className={cn(
             "h-4 w-4",
             isCurrent ? "text-primary-foreground" : "text-primary"
