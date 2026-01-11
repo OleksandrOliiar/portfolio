@@ -75,16 +75,12 @@ export default function ProjectCard({ direction, project }: ProjectCardProps) {
         {/* Category tags */}
         <ul className="mb-6 flex w-full flex-wrap items-center justify-center gap-2 md:justify-start">
           {categories.map((category, index) => (
-            <motion.li
+            <li
               key={category}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
               className="rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary backdrop-blur-sm transition-all"
             >
               {category}
-            </motion.li>
+            </li>
           ))}
         </ul>
 
@@ -95,10 +91,7 @@ export default function ProjectCard({ direction, project }: ProjectCardProps) {
 
         {/* Description */}
         <p className="mb-8 text-base leading-relaxed text-muted-foreground">
-          <HighlightedText
-            text={description}
-            highlightClassName="font-bold"
-          />
+          <HighlightedText text={description} highlightClassName="font-bold" />
         </p>
 
         {/* Action buttons */}

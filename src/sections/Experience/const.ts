@@ -26,7 +26,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "vatra",
-    role: "Junior React developer",
+    role: "React developer",
     company: "Vatra",
     period: "May 2022 - April 2024",
     current: false,

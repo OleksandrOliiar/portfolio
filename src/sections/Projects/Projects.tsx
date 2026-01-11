@@ -34,7 +34,7 @@ export default function Projects() {
               variants={itemVariants}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.6 }}
+              viewport={{ once: true, amount: 0.5 }}
             >
               <ProjectCard project={project} direction={projectDirection} />
             </motion.li>
