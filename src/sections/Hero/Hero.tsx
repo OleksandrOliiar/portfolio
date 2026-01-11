@@ -84,7 +84,7 @@ export default function Hero() {
               </Button>
             </div>
           </Link>
-          <Link href="/OleksandrOliiarCV.pdf" target="_blank">
+          <Link href="/CV_Oleksandr_Oliiar.pdf" target="_blank">
             <div>
               <Button
                 variant="secondary"
