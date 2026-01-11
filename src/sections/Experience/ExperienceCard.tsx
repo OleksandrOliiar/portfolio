@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FiCheckCircle, FiCalendar } from "react-icons/fi";
+import { HighlightedText } from "@/common/components";
 import { Experience } from "./const";
 
 interface ExperienceCardProps {
@@ -57,9 +58,12 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
                   transition={{ delay: index * 0.1 }}
                   className="flex items-start gap-3"
                 >
-                  <FiCheckCircle className=" mt-[5.5px] h-4 w-4 flex-shrink-0 text-primary" />
+                  <FiCheckCircle className="mt-[5.5px] h-4 w-4 flex-shrink-0 text-primary" />
                   <span className="leading-relaxed text-muted-foreground">
-                    {responsibility}
+                    <HighlightedText
+                      text={responsibility}
+                      highlightClassName="font-bold"
+                    />
                   </span>
                 </motion.li>
               ))}

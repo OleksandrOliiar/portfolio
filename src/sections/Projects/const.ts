@@ -23,7 +23,7 @@ export const projects: Project[] = [
     categories: ["Next.js", "Sanity", "Stripe"],
     title: "Ecommerce",
     description:
-      "A fully functional ecommerce website that enables users to discover products they need through an advanced filtering system, add them to their cart, and make purchases. Application also features an admin dashboard which is accessible by <strong>/studio</strong> url.",
+      "A fully functional ecommerce website that enables users to discover products they need through an advanced filtering system, add them to their cart, and make purchases. Application also features an admin dashboard which is accessible by **/studio** url.",
     githubLink: "https://github.com/OleksandrOliiar/ecommerce",
     siteLink: "https://ecommerce-amber-six.vercel.app",
     image: {

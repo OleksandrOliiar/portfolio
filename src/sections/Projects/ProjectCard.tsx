@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/common/ui";
+import { HighlightedText } from "@/common/components";
 import Link from "next/link";
 import { cn } from "@/common/utils";
 import { motion } from "framer-motion";
@@ -93,12 +94,12 @@ export default function ProjectCard({ direction, project }: ProjectCardProps) {
         </h3>
 
         {/* Description */}
-        <p
-          className="mb-8 text-base leading-relaxed text-muted-foreground"
-          dangerouslySetInnerHTML={{
-            __html: description,
-          }}
-        />
+        <p className="mb-8 text-base leading-relaxed text-muted-foreground">
+          <HighlightedText
+            text={description}
+            highlightClassName="font-bold"
+          />
+        </p>
 
         {/* Action buttons */}
         <div className="flex items-center justify-center gap-3 md:justify-start">

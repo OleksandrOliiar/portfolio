@@ -4,6 +4,7 @@ import { navigationItems } from "@/common/const";
 import { containerVariants, itemVariants } from "@/common/animations";
 import { useSectionInView } from "@/common/hooks";
 import { Badge, Button } from "@/common/ui";
+import { HighlightedText } from "@/common/components";
 import { LuArrowDown, LuArrowDownToLine } from "react-icons/lu";
 import { HiSparkles } from "react-icons/hi2";
 import Link from "next/link";
@@ -61,14 +62,10 @@ export default function Hero() {
           variants={itemVariants}
           className="lead mx-auto mb-8 max-w-[700px] leading-relaxed"
         >
-          I have{" "}
-          <strong className="font-semibold text-foreground">
-            3 years of experience
-          </strong>{" "}
-          building responsive, optimized, SEO-friendly and accessible web
-          applications using{" "}
-          <strong className="font-semibold text-foreground">React.js</strong>{" "}
-          and <strong className="font-semibold text-foreground">Next.js</strong>
+          <HighlightedText
+            text="I have **3 years of experience** building responsive, optimized, SEO-friendly and accessible web applications using **React.js** and **Next.js**"
+            highlightClassName="font-semibold text-foreground"
+          />
         </motion.p>
 
         {/* Enhanced CTA buttons */}
