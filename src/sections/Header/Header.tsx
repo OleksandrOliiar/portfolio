@@ -21,7 +21,7 @@ export default function Header() {
       className="fixed left-0 top-0 z-50 w-full border-b border-border/40 bg-background/80 py-3 backdrop-blur-md"
     >
       <div className="container">
-        <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-4">
+        <div className="hidden lg:grid lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4">
           <div className="flex items-center justify-start">
             <Logo />
           </div>
@@ -35,14 +35,14 @@ export default function Header() {
             </Button>
           </div>
         </div>
-        <div className="flex items-center justify-between md:hidden">
+        <div className="flex items-center justify-between lg:hidden">
           <div className="flex items-center gap-3">
             <SidebarNavigation />
             <Logo />
           </div>
           <div className="flex items-center gap-3">
             <ThemeToggle />
-            <Button asChild size="sm">
+            <Button asChild>
               <Link href="#contacts">Contact</Link>
             </Button>
           </div>
