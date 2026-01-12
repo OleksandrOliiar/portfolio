@@ -2,7 +2,7 @@
 
 My personal portfolio website - a showcase of my skills demonstrated through my projects, complete with contact information
 
-<img width="960" alt="Portfolio preview" src="https://github.com/Fall3n4ngle/portfolio/assets/57858281/6849e44a-f438-4d78-a8d4-5d1bda18cb99">
+[<img width="960" alt="Portfolio preview" src="https://github.com/Fall3n4ngle/portfolio/assets/57858281/6849e44a-f438-4d78-a8d4-5d1bda18cb99">](https://portfolio-five-neon-92.vercel.app)
 
 ## View app
 
