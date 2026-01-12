@@ -24,7 +24,7 @@ export default function HighlightedText({
             </strong>
           );
         }
-        
+
         return <span key={index}>{part}</span>;
       })}
     </>

@@ -16,8 +16,8 @@ export const contactsItems: ContactsItem[] = [
     id: "github",
     icon: LuGithub,
     label: "GitHub",
-    value: "github.com/OleksandrOliiar",
-    href: "https://github.com/OleksandrOliiar",
+    value: "github.com/oliiaroleksandr",
+    href: "https://github.com/oliiaroleksandr",
     color: "text-purple-500",
   },
   {

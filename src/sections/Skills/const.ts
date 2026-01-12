@@ -12,7 +12,7 @@ import {
   SiShadcnui,
   SiTestinglibrary,
   SiReactquery,
-  SiNodedotjs 
+  SiNodedotjs,
 } from "react-icons/si";
 
 export interface Skill {
