@@ -63,7 +63,7 @@ export default function Hero() {
           className="lead mx-auto mb-8 max-w-[700px] leading-relaxed"
         >
           <HighlightedText
-            text="I have **3 years of experience** building responsive, optimized, SEO-friendly and accessible web applications using **React.js** and **Next.js**"
+            text="I have **4+ years of experience** building responsive, optimized, SEO-friendly and accessible web applications using **React.js** and **Next.js**"
             highlightClassName="font-semibold text-foreground"
           />
         </motion.p>
