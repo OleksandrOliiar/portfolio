@@ -20,7 +20,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: "ecommerce",
-    categories: ["Next.js", "Sanity", "Stripe"],
+    categories: ["Next.js", "Headless CMS", "Stripe"],
     title: "Ecommerce",
     description:
       "A fully functional ecommerce website that enables users to discover products they need through an advanced filtering system, add them to their cart, and make purchases. Application also features an admin dashboard which is accessible by **/studio** url.",
@@ -33,7 +33,7 @@ export const projects: Project[] = [
   },
   {
     id: "messenger",
-    categories: ["Next.js", "Prisma", "Pusher"],
+    categories: ["Next.js", "SQL", "Websocket"],
     title: "Messenger",
     description:
       "A group messaging app that uses Next.js and Pusher.js to enable realtime communication via text or file messages and audio-video conferences. It also allows users to have different roles in chats, such as viewer, editor or admin.",

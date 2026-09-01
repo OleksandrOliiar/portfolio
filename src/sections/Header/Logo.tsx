@@ -18,7 +18,7 @@ export default function Logo() {
         <div className="hidden flex-col gap-0.5 text-sm leading-tight lg:flex">
           <span className="font-bold text-foreground">Oleksandr Oliiar</span>
           <span className="text-xs text-muted-foreground">
-            Frontend Developer
+            Web Developer
           </span>
         </div>
       </motion.div>

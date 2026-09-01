@@ -46,7 +46,7 @@ export default function Hero() {
           I&apos;m a{" "}
           <span className="relative inline-block">
             <span className="bg-gradient-to-r from-primary via-green-500 to-emerald-600 bg-clip-text text-transparent">
-              Frontend Developer
+              Web Developer
             </span>
             {/* Animated underline */}
             <motion.span
@@ -63,7 +63,7 @@ export default function Hero() {
           className="lead mx-auto mb-8 max-w-[700px] leading-relaxed"
         >
           <HighlightedText
-            text="I have **4+ years of experience** building responsive, optimized, SEO-friendly and accessible web applications using **React.js** and **Next.js**"
+            text="I have **4+ years of experience** building responsive, SEO-friendly and accessible web applications using **JavaScript**, **TypeScript** and **Python**"
             highlightClassName="font-semibold text-foreground"
           />
         </motion.p>

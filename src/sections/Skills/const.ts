@@ -13,6 +13,10 @@ import {
   SiTestinglibrary,
   SiReactquery,
   SiNodedotjs,
+  SiPython,
+  SiAmazonwebservices,
+  SiGithubactions,
+  SiPostgresql,
 } from "react-icons/si";
 
 export interface Skill {
@@ -43,6 +47,21 @@ export const skills: Skill[] = [
     Icon: SiTypescript,
   },
   {
+    id: "python",
+    title: "Python",
+    Icon: SiPython,
+  },
+  {
+    id: "nodejs",
+    title: "Node.js",
+    Icon: SiNodedotjs,
+  },
+  {
+    id: "sql",
+    title: "SQL",
+    Icon: SiPostgresql,
+  },
+  {
     id: "react",
     title: "React.js",
     Icon: SiReact,
@@ -53,33 +72,18 @@ export const skills: Skill[] = [
     Icon: SiNextdotjs,
   },
   {
-    id: "redux",
-    title: "Redux",
-    Icon: SiRedux,
-  },
-  {
-    id: "reactQuery",
-    title: "React Query",
-    Icon: SiReactquery,
-  },
-  {
-    id: "testing",
-    title: "Testing",
-    Icon: SiTestinglibrary,
-  },
-  {
-    id: "webpack",
-    title: "Webpack",
-    Icon: SiWebpack,
-  },
-  {
-    id: "nodejs",
-    title: "Node.js",
-    Icon: SiNodedotjs,
+    id: "aws",
+    title: "AWS",
+    Icon: SiAmazonwebservices,
   },
   {
     id: "github",
     title: "Github",
     Icon: SiGithub,
+  },
+  {
+    id: "cicd",
+    title: "CI/CD",
+    Icon: SiGithubactions,
   },
 ];
